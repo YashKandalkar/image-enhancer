@@ -1,0 +1,19 @@
+.main{
+    background: #333;
+    height: 10vh;
+    color: #eee ;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    letter-spacing: 4px;
+    padding-left: 30px;
+}
+
+.imageText{
+    font-size: 2em;
+}
+
+.enhancerText{
+    font-size: 2em;
+    color: #e67e22; 
+}

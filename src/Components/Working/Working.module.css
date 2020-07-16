@@ -1,0 +1,77 @@
+.main{
+    height: 100vh;
+    background: #242424;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainTitle{
+    font-size: 2.9em;
+    margin-top: 1.7em;
+}
+
+.imageText{
+    letter-spacing: 2px;
+}
+
+.enhancerText{
+     color: #e67e22; 
+     letter-spacing: 2px;
+}
+
+.gridContainer{
+    width: 85%;
+    margin-bottom: 10em;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: 4em;
+    align-items: center;
+    gap: 4em;
+}
+
+.text{
+    color: #ddd;
+    font-family: 'Open Sans';
+    font-size: 80%;
+}
+
+.title{
+    font-size: 2.2em;
+    color: #eee;
+}
+
+.icon{
+    margin-left: 15px;
+    color: #e67e22;
+}
+
+.description{
+    padding-top: 20px;
+    font-size: 1.8em;
+    color: #aaa;
+    line-height: 1.5;
+    text-align: left;
+}
+
+@media only screen and (max-width: 480px){
+    .mainTitle{
+        font-size: 2.5em;
+        margin-top: 3em;
+    }
+    .text{
+        font-size: 90%;
+    }
+    .gridContainer{
+        margin-bottom: 12em;
+        width: 60%;
+    }
+    .container{
+        grid-gap: 4em;
+        gap: 4em;
+    }
+}

@@ -1,0 +1,12 @@
+.main{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e67e22;
+    user-select: none;
+    border-radius: 100%;
+}
