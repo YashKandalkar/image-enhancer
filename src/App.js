@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
-import styles from './App.module.css';
-import ImageUploader from './Containers/ImageUploader/ImageUploader';
-import TopBar from './Components/TopBar/TopBar';
-import Info from './Components/Info/Info';
-import Working from './Components/Working/Working';
-import ContactUs from './Components/ContactUs/ContactUs';
-import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
-import SlideShow from './Containers/SlideShow/SlideShow';
+import React, { useState, useEffect } from 'react';
+import Home from './pages/Home/Home';
+import Enhance from './pages/Enhance/Enhance';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,34 +9,27 @@ import {
 } from "react-router-dom";
 
 
-
 function App() {
   const [showTopButton, setTopButton] = useState(false);
-  document.body.onscroll = () => {
-    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-      setTopButton(true);
+  useEffect(() => {
+    document.body.onscroll = () => {
+      if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        setTopButton(true);
+      }
+      else{
+        setTopButton(false);
+      }
     }
-    else{
-      setTopButton(false);
-    }
-  }
+  })
 
   return (
     <Router>
-      <TopBar />
       <Switch >
         <Route path="/image-enhancer/enhance">
-          <ImageUploader />
-          <ContactUs color='light'/>
+          <Enhance />
         </Route>
         <Route path="/image-enhancer">
-          <div className={styles.App}>
-            <SlideShow />
-            <Info />
-            <Working />
-            <ScrollToTop show={showTopButton}/>
-            <ContactUs color='dark'/>
-          </div>
+          <Home showTopButton={showTopButton}/>
         </Route>
       </Switch>
     </Router>
