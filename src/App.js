@@ -30,11 +30,11 @@ function App() {
     <Router>
       <TopBar />
       <Switch >
-        <Route path="/enhance">
+        <Route path="/image-enhancer/enhance">
           <ImageUploader />
           <ContactUs color='light'/>
         </Route>
-        <Route path="/">
+        <Route path="/image-enhancer">
           <div className={styles.App}>
             <SlideShow />
             <Info />

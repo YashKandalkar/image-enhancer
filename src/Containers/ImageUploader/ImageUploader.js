@@ -37,6 +37,14 @@ class ImageUploader extends React.Component {
                         <div className={styles.title}>
                             Or upload a photo
                         </div>
+                        
+                        <div className={styles.svgHolder}>
+                            <img 
+                                src='/image-enhancer/assets/svg/image-upload-undraw.svg' 
+                                width='100%' 
+                                alt='illustration'
+                            />
+                        </div>
                         <div className={styles.uploadButtonContainer}>
                             <button 
                                 className={styles.uploadButton}

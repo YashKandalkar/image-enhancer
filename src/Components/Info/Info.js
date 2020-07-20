@@ -13,9 +13,11 @@ const Info = () => {
                     those low quality images <br />
                     to high definition in one click!
                 </div>
-                <button className={styles.tryItButton}>
-                    <Link to='/enhance'>Try it now!</Link>
-                </button>
+                {/* <button 
+                    onClick={() => window.open('/image-enhancer/enhance', '_parent')}
+                > */}
+                    <Link to='/image-enhancer/enhance' className={styles.tryItButton}>Try it now!</Link>
+                {/* </button> */}
             </div>
             <div className={styles.imageHolder}>
                 <img src={ill1} alt='illustration'/>
