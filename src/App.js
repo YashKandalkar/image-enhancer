@@ -12,14 +12,14 @@ import {
 function App() {
   const [showTopButton, setTopButton] = useState(false);
   useEffect(() => {
-    document.body.onscroll = () => {
+    window.addEventListener('scroll', () => {
       if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
         setTopButton(true);
       }
       else{
         setTopButton(false);
       }
-    }
+    });
   })
 
   return (

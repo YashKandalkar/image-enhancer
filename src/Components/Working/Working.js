@@ -6,6 +6,7 @@ import {
     faPaw
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import Reveal from '../../Containers/Reveal/Reveal';
 
 const Working = () => {
     return (
@@ -14,9 +15,10 @@ const Working = () => {
                 Why <span className={styles.imageText}>IMAGE </span> 
                     <span className={styles.enhancerText}>ENHANCER</span>
                 ?
-            </div>
+            </div> 
             <div className={styles.gridContainer}>
                 <div className={styles.container}>
+                    <Reveal>
                     <div className={styles.text}>
                         <div className={styles.title}>
                             Lightning fast
@@ -31,6 +33,8 @@ const Working = () => {
                             is optimized version of SRGAN
                         </div>
                     </div>
+                    </Reveal>
+                    <Reveal>
                     <div className={styles.text}>
                         <div className={styles.title}>
                             Optimized for animals
@@ -45,6 +49,8 @@ const Working = () => {
                             cover every small detail
                         </div>
                     </div>
+                    </Reveal>
+                    <Reveal>
                     <div className={styles.text}>
                         <div className={styles.title}>
                             Is it free
@@ -59,6 +65,7 @@ const Working = () => {
                             free to use!
                         </div>
                     </div>
+                    </Reveal>
                 </div>
             </div>
         </div>
